@@ -2,20 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer utilities {
+  .global-padding-x {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  .global-padding-y {
+    @apply py-8 sm:py-10 lg:py-12;
+  }
+
+  .max-container {
+    margin: 0;
+    padding: 0;
+    max-width: 1440px;
+    @apply mx-auto;
+  }
+
+  .font-title {
+    @apply text-title sm:text-title_sm  md:text-title_md  lg:text-title_lg  xl:text-title_xl font-bold leading-none;
   }
 }
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-} */
