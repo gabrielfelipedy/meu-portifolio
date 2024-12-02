@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-black global-padding-x">
+    <nav className="bg-black global-padding-x global-padding-y">
       <div className="max-container">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
@@ -47,7 +47,7 @@ const Navbar = () => {
               </a>
               <a
                 href="/"
-                className="text-white hover:bg-white hover:text-black rounded-lg p-2"
+                className="text-black bg-white font-bold rounded-lg p-2"
               >
                 Fale comigo
               </a>

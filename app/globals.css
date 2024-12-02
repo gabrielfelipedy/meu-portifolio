@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+  font-family: "Inter", sans-serif;
+}
 
 @layer utilities {
   .global-padding-x {
@@ -9,7 +14,7 @@
   }
 
   .global-padding-y {
-    @apply py-8 sm:py-10 lg:py-12;
+    @apply py-4 sm:py-6 lg:py-8;
   }
 
   .max-container {
@@ -21,5 +26,13 @@
 
   .font-title {
     @apply text-title sm:text-title_sm  md:text-title_md  lg:text-title_lg  xl:text-title_xl font-bold leading-none;
+  }
+
+  .font-section {
+    @apply text-section sm:text-section_sm  md:text-section_md  lg:text-section_lg  xl:text-section_xl;
+  }
+
+  .font-small {
+    @apply text-small sm:text-small_sm  md:text-small_md  lg:text-small_lg  xl:text-small_xl;
   }
 }

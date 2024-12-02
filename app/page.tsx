@@ -8,7 +8,7 @@ export default function Home() {
     <main>
       <Navbar />
 
-      <section>
+      <section className="mt-20">
         <Hero />
       </section>
 
