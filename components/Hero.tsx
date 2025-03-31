@@ -2,6 +2,10 @@ import React from 'react'
 import Image from 'next/image'
 
 import model from '/public/assets/img/model.jpg'
+import gaby from '/public/assets/img/gabysite.png'
+import amparo from '/public/assets/img/instituto-amparo.png'
+import camila from '/public/assets/img/camila-neiva.png'
+import calculadora_ebtt from '/public/assets/img/calculadora-ebtt.png'
 
 const Hero = () => {
   return (
@@ -15,10 +19,10 @@ const Hero = () => {
           <div className='rounded-lg p-4'>
             <div className='relative w-full h-[376px]'>
               <Image 
-                src={model}
+                src={gaby}
                 alt="instagram"
                 layout='fill'
-                className='object-cover object-center rounded-lg'
+                className='object-contain object-center rounded-lg'
               />
             </div>
             <p className="font-section mt-10">Gabrielle Franzotti Site</p>
@@ -28,10 +32,10 @@ const Hero = () => {
           <div className='rounded-lg p-4'>
             <div className='relative w-full h-[376px]'>
               <Image 
-                src={model}
+                src={calculadora_ebtt}
                 alt="instagram"
                 layout='fill'
-                className='object-cover object-center rounded-lg'
+                className='object-contain object-center rounded-lg'
               />
             </div>
 
@@ -42,10 +46,10 @@ const Hero = () => {
           <div className='rounded-lg p-4'>
             <div className='relative w-full h-[376px]'>
               <Image 
-                src={model}
+                src={amparo}
                 alt="instagram"
                 layout='fill'
-                className='object-cover object-center rounded-lg'
+                className='object-contain object-center rounded-lg'
               />
             </div>
 
@@ -56,10 +60,10 @@ const Hero = () => {
           <div className='rounded-lg p-4'>
             <div className='relative w-full h-[376px]'>
               <Image 
-                src={model}
+                src={camila}
                 alt="instagram"
                 layout='fill'
-                className='object-cover object-center rounded-lg'
+                className='object-contain object-center rounded-lg'
               />
             </div>
 
