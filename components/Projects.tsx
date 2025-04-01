@@ -7,7 +7,6 @@ import amparo from "/public/assets/img/instituto-amparo.png";
 import camila from "/public/assets/img/camila-neiva.png";
 import calculadora_ebtt from "/public/assets/img/calculadora-ebtt.png";
 import { Button } from "./ui/button";
-import { Link, ArrowRight } from "lucide-react";
 import { Badge } from "./ui/badge";
 
 const Projects = () => {
@@ -54,9 +53,7 @@ const Projects = () => {
                 </div>
 
                 <Button className="text-xl p-7 flex items-center gap-2 mt-10">
-                  <Link className="w-5 h-5" />
                   Visitar site
-                  <ArrowRight className="w-5 h-5" />
                 </Button>
               </div>
             </div>
@@ -94,9 +91,7 @@ const Projects = () => {
                 </div>
 
                 <Button className="text-xl p-7 flex items-center gap-2 mt-10">
-                  <Link className="w-5 h-5" />
                   Visitar site
-                  <ArrowRight className="w-5 h-5" />
                 </Button>
               </div>
             </div>
@@ -132,9 +127,7 @@ const Projects = () => {
                 </div>
 
                 <Button className="text-xl p-7 flex items-center gap-2 mt-10">
-                  <Link className="w-5 h-5" />
                   Visitar site
-                  <ArrowRight className="w-5 h-5" />
                 </Button>
               </div>
             </div>
@@ -172,9 +165,7 @@ const Projects = () => {
                 </div>
 
                 <Button className="text-xl p-7 flex items-center gap-2 mt-10">
-                  <Link className="w-5 h-5" />
                   Visitar site
-                  <ArrowRight className="w-5 h-5" />
                 </Button>
               </div>
             </div>
