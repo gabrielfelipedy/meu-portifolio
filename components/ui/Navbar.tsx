@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <nav className="bg-black global-padding-x global-padding-y">
       <div className="max-container">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex items-center justify-between h-8">
           <div className="flex items-center">
             <div className="flex-shrink-0">
               <a href="/" className="text-white">
@@ -34,7 +34,7 @@ const Navbar = () => {
                 Início
               </a>
               <a
-                href="/"
+                href="/projects"
                 className="text-white hover:bg-white hover:text-black rounded-lg p-2"
               >
                 Projetos
