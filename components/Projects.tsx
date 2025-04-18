@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 
-import model from "/public/assets/img/model.jpg";
 import gaby from "/public/assets/img/gabysite.png";
 import amparo from "/public/assets/img/instituto-amparo.png";
 import camila from "/public/assets/img/camila-neiva.png";

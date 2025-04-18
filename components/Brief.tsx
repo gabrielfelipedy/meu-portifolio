@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import me from "/public/assets/img/me.JPEG";
+import my_photo from "/public/assets/img/me.jpg";
 
 const Brief = () => {
   return (
@@ -32,7 +32,7 @@ const Brief = () => {
           <div className="flex justify-end">
             <div className="relative w-[500px] h-[650px] hidden md:block">
               <Image
-                src={me}
+                src={my_photo}
                 alt="profile"
                 layout="fill"
                 className="object-cover object-center rounded-[2.5rem]"
