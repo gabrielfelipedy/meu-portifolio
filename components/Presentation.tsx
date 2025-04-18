@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 
-import profile from "/public/assets/img/profile.JPEG";
+import img_profile from "/public/assets/img/profile.jpg";
 
 const Presentation = () => {
   return (
@@ -9,7 +9,7 @@ const Presentation = () => {
       <div className="center max-container">
         <div className="relative w-[300px] h-[300px]">
           <Image
-            src={profile}
+            src={img_profile}
             alt="profile"
             layout="fill"
             className="object-cover object-center rounded-full"
