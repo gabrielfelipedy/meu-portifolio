@@ -33,7 +33,7 @@
   }
 
   .font-subtitle {
-    @apply text-subtitle sm:text-subtitle_sm  md:text-subtitle_md  lg:text-subtitle_lg  xl:text-subtitle_xl font-bold leading-none;
+    @apply text-subtitle sm:text-subtitle_sm  md:text-subtitle_md  lg:text-subtitle_lg  xl:text-subtitle_xl leading-none;
   }
 
   .font-section {
@@ -54,15 +54,11 @@
   }
 
   .img-size {
-    @apply w-[400px] h-[225px] sm:w-[600px] sm:h-[337px] md:w-[700px] md:h-[393px] lg:w-[800px] lg:h-[450px] xl:w-[850px] xl:h-[478px];
-  }
-
-  .img-hover {
-    @apply filter brightness-90;
+    @apply w-[350px] h-[254.3px] sm:w-[500px] sm:h-[363.4px] md:w-[800px] md:h-[581.4px] lg:w-[900px] lg:h-[654.1px] xl:w-[1000px] xl:h-[726.8px];
   }
 
   .img-hover:hover {
-    @apply transition duration-300 filter hover:brightness-75;
+    @apply transition duration-300 filter hover:brightness-90;
   }
 }
 
