@@ -1,108 +1,79 @@
-"use client"
+"use client";
 
-import React from "react";
-import { useState } from "react";
-import menu from '/public/assets/icons/menu.svg'
-import Image from "next/image";
+import * as React from "react";
+import Link from "next/link";
+import { Menu } from "lucide-react";
 
-const Navbar = () => {
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
-    const [isClicked, setClicked] = useState(false)
+const navItems = [
+  { name: "Início", href: "/" },
+  { name: "Projetos", href: "/projects" },
+  { name: "Orçamentos", href: "/orcamentos" },
+  { name: "Fale Comigo", href: "/contato" },
+];
 
-  const toggleNavBar = () => {
-    setClicked(!isClicked)
-  };
+export default function Navbar() {
+  const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <nav className="bg-black global-padding-x global-padding-y">
+    <div className="global-padding-x global-padding-y">
       <div className="max-container">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <div className="flex-shrink-0">
-              <a href="/" className="text-white">
+        <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+          <div className="container flex h-16 items-center justify-between">
+            <div className="flex items-center">
+              <Link href="/" className="font-semibold text-lg">
                 Gabriel Felipe
-              </a>
+              </Link>
             </div>
-          </div>
 
-          <div className="hidden md:block">
-            <div className="flex items-center space-x-4">
-              <a
-                href="/"
-                className="text-white hover:bg-white hover:text-black rounded-lg p-2"
-              >
-                Início
-              </a>
-              <a
-                href="/"
-                className="text-white hover:bg-white hover:text-black rounded-lg p-2"
-              >
-                Projetos
-              </a>
-              <a
-                href="/"
-                className="text-white hover:bg-white hover:text-black rounded-lg p-2"
-              >
-                Orçamentos
-              </a>
-              <a
-                href="/"
-                className="text-black bg-white font-bold rounded-lg p-2"
-              >
-                Fale comigo
-              </a>
-            </div>
-          </div>
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center space-x-8">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="text-sm font-medium transition-colors hover:bg-slate-300 rounded-lg p-3 "
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
 
-          <div className="md:hidden flex items-center">
-            <button
-              className="inline-flex items-center justify-center p-2 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
-              onClick={toggleNavBar}
-            >
-                <Image 
-                
-                    src={menu}
-                    alt="menu_button"
-                    width={30}
-                    height={30}
-                />
-            </button>
+            {/* Mobile Navigation */}
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild className="md:hidden">
+                <Button variant="ghost" size="icon" className="h-9 w-9">
+                  <Menu className="h-5 w-5" />
+                  <span className="sr-only">Toggle menu</span>
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="left" className="w-[250px] sm:w-[300px]">
+                <div className="flex flex-col space-y-4 mt-8">
+                  <Link
+                    href="/"
+                    className="font-semibold text-lg mb-4"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    Gabriel Felipe
+                  </Link>
+                  {navItems.map((item) => (
+                    <Link
+                      key={item.name}
+                      href={item.href}
+                      className="text-sm font-medium transition-colors hover:text-primary py-2"
+                      onClick={() => setIsOpen(false)}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
-        </div>
+        </header>
       </div>
-
-      {isClicked && (
-        <div className="md:hidden ">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-                <a
-                    href="/"
-                    className="text-white block hover:bg-white hover:text-black rounded-lg p-2"
-                >
-                    Início
-                </a>
-                <a
-                    href="/"
-                    className="text-white block hover:bg-white hover:text-black rounded-lg p-2"
-                >
-                    Projetos
-                </a>
-                <a
-                    href="/"
-                    className="text-white block hover:bg-white hover:text-black rounded-lg p-2"
-                >
-                    Orçamentos
-                </a>
-                <a
-                    href="/"
-                    className="text-white block hover:bg-white hover:text-black rounded-lg p-2"
-                >
-                    Fale comigo
-                </a>
-            </div>
-        </div>
-      )}
-    </nav>
+    </div>
   );
-};
-
-export default Navbar;
+}
