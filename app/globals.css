@@ -2,15 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 * {
   font-family: "Inter", sans-serif;
 }
 
 @font-face {
-  font-family: 'monoglyphic';
-  src: URL('fonts/Monoglyphic Font/Monoglyphic Regular.ttf') format('truetype');
+  font-family: "monoglyphic";
+  src: URL("fonts/Monoglyphic Font/Monoglyphic Regular.ttf") format("truetype");
 }
 
 .monoglyphic {
@@ -57,8 +57,7 @@
     @apply flex flex-col items-center;
   }
 
-  .container-size
-  {
+  .container-size {
     @apply w-[400px] sm:w-[600px] md:w-[700px] lg:w-[800px] xl:w-[850px];
   }
 
@@ -74,14 +73,16 @@
     background-color: #c6d4e1;
   }
 
-  .bg-position 
-  {
+  .bg-position {
     background-position: right 100px;
   }
 
-  .bg-mobile-position
-  {
+  .bg-mobile-position {
     background-position: center 100px;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
   }
 }
