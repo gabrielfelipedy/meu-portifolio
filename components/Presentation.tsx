@@ -5,7 +5,7 @@ import img_profile from "/public/assets/img/me-no-background.png";
 
 const Presentation = () => {
   return (
-    <div className="global-padding-x bg-hero bg-cover sm:bg-contain bg-no-repeat h-[800px] bg-fixed bg-mobile-position sm:bg-position relative">
+    <div className="global-padding-x bg-hero sm:bg-contain bg-no-repeat h-[800px] bg-fixed bg-mobile-position sm:bg-position relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white"></div>
 
       <div className="max-container flex flex-col z-10 relative">
