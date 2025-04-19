@@ -82,7 +82,7 @@
   .bg-mobile-position
   {
     background-position: center 100px;
-    background-size: 85vh;
+    background-size: cover;
   }
 }
 
