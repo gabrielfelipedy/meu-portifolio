@@ -8,6 +8,15 @@
   font-family: "Inter", sans-serif;
 }
 
+@font-face {
+  font-family: 'monoglyphic';
+  src: URL('fonts/Monoglyphic Font/Monoglyphic Regular.ttf') format('truetype');
+}
+
+.monoglyphic {
+  font-family: "monoglyphic", sans-serif;
+}
+
 @layer utilities {
   .global-padding-x {
     @apply px-4 sm:px-6 lg:px-8;
@@ -59,6 +68,21 @@
 
   .img-hover:hover {
     @apply transition duration-300 filter hover:brightness-90;
+  }
+
+  .bg-jet-stream {
+    background-color: #c6d4e1;
+  }
+
+  .bg-position 
+  {
+    background-position: right 100px;
+  }
+
+  .bg-mobile-position
+  {
+    background-position: center 100px;
+    background-size: 85vh;
   }
 }
 

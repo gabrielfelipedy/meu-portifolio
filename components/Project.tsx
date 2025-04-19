@@ -42,7 +42,9 @@ const Project = (props: props) => {
           <div className="mt-5 flex gap-5">
             {props.tech_icons.map((tech_badge) => {
               return (
-                <div className="flex items-center gap-2 border-2 border-slate-400 p-2 rounded-lg hover:bg-slate-200">
+                <div 
+                key={tech_badge.description}
+                className="flex items-center gap-2 border-2 border-slate-400 p-2 rounded-lg hover:bg-slate-200">
                   <Image
                     src={tech_badge.source} // or a remote URL
                     alt="image"

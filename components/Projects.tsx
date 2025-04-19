@@ -13,10 +13,10 @@ import Project from "./Project";
 
 const Projects = () => {
   return (
-    <div className="global-padding-x global-padding-y">
+    <div className="global-padding-x bg-jet-stream">
       <div className="max-container">
-        <div className="flex flex-col items-center mt-20">
-          <h1 className="font-title mb-10 text-center">Meus projetos</h1>
+        <div className="flex flex-col items-center">
+          <h1 className="font-title mt-20 mb-10 text-center">Meus projetos</h1>
 
           <p className="text-slate-500 font-subtitle text-center lg:w-6/12 w-9/12">
             Aqui você encontrará projetos que já fiz para diversos públicos e
