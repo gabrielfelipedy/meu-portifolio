@@ -2,10 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 * {
   font-family: "Inter", sans-serif;
+}
+
+@font-face {
+  font-family: "monoglyphic";
+  src: URL("fonts/Monoglyphic Font/Monoglyphic Regular.ttf") format("truetype");
+}
+
+.monoglyphic {
+  font-family: "monoglyphic", sans-serif;
 }
 
 @layer utilities {
@@ -48,8 +57,7 @@
     @apply flex flex-col items-center;
   }
 
-  .container-size
-  {
+  .container-size {
     @apply w-[400px] sm:w-[600px] md:w-[700px] lg:w-[800px] xl:w-[850px];
   }
 
@@ -59,6 +67,48 @@
 
   .img-hover:hover {
     @apply transition duration-300 filter hover:brightness-90;
+  }
+
+  .bg-jet-stream {
+    background-color: #c6d4e1;
+  }
+
+  .bg-position {
+    background-position: right 100px;
+  }
+
+  .bg-mobile-position:after {
+    content: "";
+    position: fixed; /* stretch a fixed position to the whole screen */
+    top: 0;
+    height: 100vh; /* fix for mobile browser address bar appearing disappearing */
+    left: 0;
+    right: 0;
+    z-index: -1; /* needed to keep in the background */
+    @apply bg-hero;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: center 100px;
+    background-repeat: no-repeat;
+  }
+
+  .bg-test:after {
+    content: "";
+    position: fixed; /* stretch a fixed position to the whole screen */
+    top: 0;
+    height: 100vh; /* fix for mobile browser address bar appearing disappearing */
+    left: 0;
+    right: 0;
+    z-index: -1; /* needed to keep in the background */
+    @apply bg-hero;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
+    background-size: contain;
+    background-position: right 100px;
+    background-repeat: no-repeat;
   }
 }
 
