@@ -1,9 +1,10 @@
-import Navbar from "@/components/ui/Navbar";
+import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/Footer";
 
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import { ThemeProvider } from "@/context/ThemeProvider";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,11 +32,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Navbar />
-
-        {children}
-
-        <Footer />
+        <ThemeProvider>
+          <Navbar />
+          {children}
+          <Footer className="pb-10" />
+        </ThemeProvider>
       </body>
     </html>
   );
