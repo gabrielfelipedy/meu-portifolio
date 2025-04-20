@@ -17,7 +17,7 @@ interface props {
 
 const Project = (props: props) => {
   return (
-    <div className="mt-40">
+    <div className="mt-12 scroll-animation">
       <div className="flex flex-col items-center">
         <p className="font-section mt-10 font-bold">{props.name}</p>
         <p className="font-small text-gray-600">{props.date}</p>
@@ -46,7 +46,7 @@ const Project = (props: props) => {
               return (
                 <div 
                 key={tech_badge.description}
-                className="flex items-center gap-2 border-2 border-slate-400 p-2 rounded-lg hover:bg-slate-200">
+                className="flex items-center gap-2 border-2 border-slate-400 p-2 rounded-lg dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-dark-400">
                   <Image
                     src={tech_badge.source} // or a remote URL
                     alt="image"

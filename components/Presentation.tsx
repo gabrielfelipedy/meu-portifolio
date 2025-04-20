@@ -5,9 +5,9 @@ import img_profile from "/public/assets/img/me-no-background.png";
 
 const Presentation = () => {
   return (
-    <div className="global-padding-x bg-mobile-position md:bg-position h-auto min-h-[100vh] bg-fixed relative overflow-hidden">
+    <div className="global-padding-x bg-mobile-position md:bg-position h-auto min-h-[100vh] bg-fixed relative overflow-hidden dark:bg-dark-300">
 
-      <div className="absolute inset-0 bg-[linear-gradient(transparent_1%,white_65%)] md:bg-[linear-gradient(transparent_45%,white_95%)]"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(transparent_1%,white_65%)] md:bg-[linear-gradient(transparent_45%,white_95%)] dark:hidden"></div>
 
       <div className="max-container flex flex-col z-10 relative">
         <div className="md:w-7/12">

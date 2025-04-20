@@ -6,12 +6,12 @@ import { Menu } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import ThemeToggler from "./ThemeToggler";
 
 const navItems = [
   { name: "Início", href: "/" },
-  { name: "Projetos", href: "/projects" },
-  { name: "Orçamentos", href: "/orcamentos" },
-  { name: "Fale Comigo", href: "/contato" },
+  { name: "Projetos", href: "#projects" },
+  { name: "Contato", href: "#contact" },
 ];
 
 export default function Navbar() {
@@ -43,12 +43,13 @@ export default function Navbar() {
           </nav>
 
           <div className="flex items-center">
-            <p>theme</p>
-            <p>language</p>
+            <ThemeToggler />
+            {/* <p>language</p> */}
           </div>
 
           {/* Mobile Navigation */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
+          
             <SheetTrigger asChild className="md:hidden">
               <Button variant="ghost" size="icon" className="h-9 w-9">
                 <Menu className="h-5 w-5" />

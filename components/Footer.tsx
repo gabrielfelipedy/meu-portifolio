@@ -8,32 +8,37 @@ import instagram from "/public/assets/icons/instagram.svg";
 import linkedin from "/public/assets/icons/linkedin.svg";
 import ContactForm from "./ContactForm";
 
-const Footer = () => {
+interface props
+{
+  className?: string;
+}
+
+const Footer = (props: props) => {
   return (
-    <footer className="global-padding-x global-padding-y bg-white h-auto min-h-[100vh]">
+    <footer id="contact" className={`global-padding-x global-padding-y bg-white dark:bg-dark-400 h-auto min-h-[100vh] ${props.className}`}>
       <div className="max-container">
         <div className="flex flex-col items-center">
 
           <div className="mt-36 w-full flex flex-col md:flex-row md:justify-evenly md:items-center">
 
-            <div className="text-wrap break-words text-center md:text-left leading-none md:w-1/2">
+            <div className="text-wrap break-words text-center md:text-left leading-none md:basis-6/12">
               <p className="font-title font-extrabold">VAMOS INOVAR</p>
               <p className="font-title text-slate-400 font-extrabold">
                 JUNTOS!
               </p>
             </div>
 
-            <div className="mt-12 md:mt-0">
+            <div className="md:basis-6/12 mt-12 md:mt-0">
               <ContactForm />
             </div>
           </div>
 
-          <p className="font-subtitle font-bold text-center mt-96 text-gray-600">
+          <p className="font-subtitle font-bold text-center mt-64 text-gray-600">
             Me siga nas minhas redes
           </p>
 
-          <div className="flex gap-x-8 mt-20">
-            <span className="relative w-[25px] h-[25px]">
+          <div className="flex gap-x-8 mt-20 mb-20">
+            <span className="relative w-[50px] h-[50px]">
               <Link
                 href={"https://www.facebook.com/gabrielfelipedev"}
                 target="_blank"
@@ -47,7 +52,7 @@ const Footer = () => {
               </Link>
             </span>
 
-            <span className="relative w-[25px] h-[25px]">
+            <span className="relative w-[50px] h-[50px]">
               <Link
                 href={"http://instagram.com/gabrielfelipedev"}
                 target="_blank"
@@ -60,7 +65,7 @@ const Footer = () => {
                 />
               </Link>
             </span>
-            <span className="relative w-[25px] h-[25px]">
+            <span className="relative w-[50px] h-[50px]">
               <Link href={"http://github.com/gabrielfelipedy"} target="_blank">
                 <Image
                   src={github}
@@ -70,7 +75,7 @@ const Footer = () => {
                 />
               </Link>
             </span>
-            <span className="relative w-[25px] h-[25px]">
+            <span className="relative w-[50px] h-[50px]">
               <Link
                 href={"http://linkedin.com/in/gabrielfelipedy"}
                 target="_blank"
@@ -86,20 +91,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* <div className='grid grid-cols-3 gap-x-10 gap-y-5'>
-          <p>Topic</p>
-          <p>Topic</p>
-          <p>Topic</p>
-          <p>Topic</p>
-          <p>Topic</p>
-          <p>Topic</p>
-          <p>Topic</p>
-          <p>Topic</p>
-          <p>Topic</p>
-          <p>Topic</p>
-          <p>Topic</p>
-          <p>Topic</p>
-        </div> */}
       </div>
     </footer>
   );

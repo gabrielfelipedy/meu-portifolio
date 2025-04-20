@@ -24,6 +24,21 @@ export default {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
         },
+        dark: {
+          "100": "#000000",
+          "200": "#0F1117",
+          "300": "#151821",
+          "400": "#212734",
+          "500": "#101012",
+        },
+        light: {
+          "400": "#858EAD",
+          "500": "#7B8EC8",
+          "700": "#DCE3F1",
+          "800": "#F4F6F8",
+          "850": "#FDFDFD",
+          "900": "#FFFFFF",
+        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
@@ -51,6 +66,9 @@ export default {
           "5": "hsl(var(--chart-5))",
         },
       },
+      fontFamily: {
+        monoglyphic: ["monoglyphic", "sans-serif"]
+      },
       fontSize: {
         title_xl: "70pt",
         title_lg: "60pt",
@@ -73,18 +91,23 @@ export default {
         small_sm: "12.5pt",
         small: "12pt",
       },
+      boxShadow: {
+  			'light-100': '0px 12px 20px 0px rgba(184, 184, 184, 0.03), 0px 6px 12px 0px',
+  			'light-200': '10px 10px 20px 0px rgba(218, 213, 213, 0.10)',
+  			'light-300': '-10px 10px 20px 0px rgba(218, 213, 213, 0.10',
+  			'dark-100': '0px 2px 10px 0px rgba(46, 52, 56, 0.10)',
+  			'dark-200': '2px 0px 20px 0px rgba(39, 36, 36, 0.04)'
+  		},
       backgroundImage: {
         hero: "url('/assets/img/me-no-background.png')",
       },
       borderRadius: {
+        xl: "calc(var(--radius) + 2px)",
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
-        sm: "calc(var(--radius) - 4px)",
-      },
-	  fontFamily: {
-        monoglyphic: ['monoglyphic', "sans-serif"]
+        sm: "calc(var(--radius) - 4px)"
       }
-    },
+    }
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
