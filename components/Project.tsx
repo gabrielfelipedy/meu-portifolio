@@ -1,6 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 interface props {
   name: string;
@@ -11,6 +12,7 @@ interface props {
     source: StaticImageData;
     description: string;
   }[];
+  project_url: string;
 }
 
 const Project = (props: props) => {
@@ -50,15 +52,17 @@ const Project = (props: props) => {
                     alt="image"
                     className="w-6 object-contain"
                   />
-                  {tech_badge.description}
+                  <span>{tech_badge.description}</span>
                 </div>
               );
             })}
           </div>
 
+          <Link href={props.project_url} target="_blank">
           <Button className="text-xl p-7 flex items-center gap-2 mt-10 w-full sm:w-[150px]">
             Visitar site
           </Button>
+          </Link>
         </div>
       </div>
     </div>

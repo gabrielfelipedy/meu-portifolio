@@ -20,7 +20,9 @@ export default function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="global-padding-x global-padding-y">
+
         <div className="max-container flex h-8 items-center justify-between">
+
           <div className="flex items-center">
             <Link href="/" className="font-semibold monoglyphic text-lg">
               Gabriel Felipe
@@ -39,6 +41,11 @@ export default function Navbar() {
               </Link>
             ))}
           </nav>
+
+          <div className="flex items-center">
+            <p>theme</p>
+            <p>language</p>
+          </div>
 
           {/* Mobile Navigation */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
