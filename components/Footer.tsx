@@ -10,7 +10,7 @@ import ContactForm from "./ContactForm";
 
 const Footer = () => {
   return (
-    <footer className="global-padding-x global-padding-y bg-white h-auto min-h-[100vh]">
+    <footer id="contact" className="global-padding-x global-padding-y bg-white h-auto min-h-[100vh]">
       <div className="max-container">
         <div className="flex flex-col items-center">
 
@@ -28,7 +28,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <p className="font-subtitle font-bold text-center mt-96 text-gray-600">
+          <p className="font-subtitle font-bold text-center mt-72 text-gray-600">
             Me siga nas minhas redes
           </p>
 

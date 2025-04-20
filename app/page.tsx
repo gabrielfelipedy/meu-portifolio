@@ -10,7 +10,7 @@ export default function Home() {
         <Presentation />
       </section>
 
-      <section>
+      <section id="projects" className="scroll-mt-20">
         <Projects />
       </section>
 

@@ -17,7 +17,7 @@ interface props {
 
 const Project = (props: props) => {
   return (
-    <div className="mt-40">
+    <div className="mt-12 scroll-animation">
       <div className="flex flex-col items-center">
         <p className="font-section mt-10 font-bold">{props.name}</p>
         <p className="font-small text-gray-600">{props.date}</p>

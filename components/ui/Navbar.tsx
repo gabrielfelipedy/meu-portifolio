@@ -9,9 +9,8 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const navItems = [
   { name: "Início", href: "/" },
-  { name: "Projetos", href: "/projects" },
-  { name: "Orçamentos", href: "/orcamentos" },
-  { name: "Fale Comigo", href: "/contato" },
+  { name: "Projetos", href: "#projects" },
+  { name: "Contato", href: "#contact" },
 ];
 
 export default function Navbar() {
