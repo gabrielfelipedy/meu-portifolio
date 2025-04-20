@@ -40,6 +40,7 @@ const Projects = () => {
               }
             ]
           }
+          project_url="https://lp-institutoamparo.vercel.app"
         />
 
         <Project
@@ -58,6 +59,7 @@ const Projects = () => {
               }
             ]
           }
+          project_url="https://lp-camilaneiva.vercel.app"
         />
       </div>
     </div>

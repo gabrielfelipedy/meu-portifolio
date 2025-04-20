@@ -77,24 +77,27 @@
     background-position: right 100px;
   }
 
+  /* using after for iOS mobile compatibility */
   .bg-mobile-position:after {
     content: "";
-    position: fixed; /* stretch a fixed position to the whole screen */
+    position: fixed;
     top: 0;
-    height: 100vh; /* fix for mobile browser address bar appearing disappearing */
+    height: 100vh;
     left: 0;
     right: 0;
-    z-index: -1; /* needed to keep in the background */
+    z-index: -1;
     @apply bg-hero;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: 80% auto;
+    -moz-background-size: 80% auto;
+    -o-background-size: 80% auto;
+    background-size: 70vh auto;
     background-position: center 100px;
     background-repeat: no-repeat;
-  }
+}
 
-  .bg-test:after {
+
+  /* using after for iOS mobile compatibility */
+  .bg-position:after {
     content: "";
     position: fixed; /* stretch a fixed position to the whole screen */
     top: 0;
