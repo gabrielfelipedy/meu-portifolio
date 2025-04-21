@@ -16,9 +16,9 @@ const Projects = () => {
     <div className="global-padding-x bg-slate-100 dark:bg-dark-300">
       <div className="max-container">
         <div className="flex flex-col items-center">
-          <h1 className="font-title dark:text-white mt-20 mb-10 text-center">Meus projetos</h1>
+          <h1 className="font-title title-gradient dark:text-white mt-20 mb-10 text-center">Meus projetos</h1>
 
-          <p className="text-slate-500 font-subtitle text-center lg:w-6/12 w-9/12">
+          <p className="text-light-700 font-subtitle text-center lg:w-6/12 w-9/12">
             Aqui você encontrará projetos que já fiz para diversos públicos e
             clientes
           </p>

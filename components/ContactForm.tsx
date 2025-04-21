@@ -65,7 +65,7 @@ export default function ContactForm() {
   }
 
   return (
-    <Card className="w-full mx-auto dark:bg-black dark:border-none">
+    <Card className="w-full mx-auto dark:bg-transparent border-none">
       <CardContent className="p-8">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -75,9 +75,9 @@ export default function ContactForm() {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="dark:text-white">Email</FormLabel>
+                    <FormLabel className="dark:text-light-800">Email</FormLabel>
                     <FormControl>
-                      <Input className="dark:border-[1px] dark:border-slate-600" placeholder="email@example.com" {...field} />
+                      <Input className="border-none bg-light-800 dark:bg-dark-500 dark:text-slate-100" placeholder="seu@email.com" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -89,9 +89,9 @@ export default function ContactForm() {
                 name="subject"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel className="dark:text-white" >Assunto</FormLabel>
+                    <FormLabel className="dark:text-light-800" >Assunto</FormLabel>
                     <FormControl>
-                      <Input className="dark:border-[1px] dark:border-slate-600" placeholder="Seu assunto" {...field} />
+                      <Input className="border-none bg-light-800 dark:bg-dark-500 dark:text-slate-100" placeholder="Seu assunto" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -104,11 +104,11 @@ export default function ContactForm() {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel className="dark:text-white">Seu pedido</FormLabel>
+                  <FormLabel className="dark:text-light-800">Seu pedido</FormLabel>
                   <FormControl>
                     <Textarea
                       placeholder="Me diga a sua proposta"
-                      className="min-h-[120px] dark:border-[1px] dark:border-slate-600"
+                      className="min-h-[120px] border-none bg-light-800 dark:bg-dark-500 dark:text-slate-100"
                       {...field}
                     />
                   </FormControl>
