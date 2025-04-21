@@ -18,7 +18,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b bg-white supports-[backdrop-filter]:bg-background/60 dark:bg-dark-200 dark:supports-[backdrop-filter]:bg-dark-200/60 backdrop-blur ">
       <div className="global-padding-x global-padding-y">
 
         <div className="max-container flex h-8 items-center justify-between">

@@ -19,8 +19,8 @@ const Project = (props: props) => {
   return (
     <div className="mt-12 scroll-animation">
       <div className="flex flex-col items-center">
-        <p className="font-section mt-10 font-bold">{props.name}</p>
-        <p className="font-small text-gray-600">{props.date}</p>
+        <p className="font-section mt-10 font-bold dark:text-white">{props.name}</p>
+        <p className="font-small text-gray-600 dark:text-slate-400">{props.date}</p>
       </div>
 
       <div className="flex items-center flex-col lg:flex-row">
@@ -34,12 +34,11 @@ const Project = (props: props) => {
         </div>
 
         <div className="lg:basis-2/5 flex flex-col justify-center mb-32">
-          <p className="font-section mt-10">
-            Uma Landing Page feita para o Instituto Amparo, um centro de
-            tratamento e de saúde mental.
+          <p className="font-section mt-10 dark:text-white">
+            {props.description}
           </p>
 
-          <p className="font-small font-bold mt-10">Tecnologias utilizadas</p>
+          <p className="font-small font-bold mt-10 dark:text-slate-200">Tecnologias utilizadas</p>
 
           <div className="mt-5 flex gap-5">
             {props.tech_icons.map((tech_badge) => {
@@ -52,14 +51,14 @@ const Project = (props: props) => {
                     alt="image"
                     className="w-6 object-contain"
                   />
-                  <span>{tech_badge.description}</span>
+                  <span className="dark:text-slate-200">{tech_badge.description}</span>
                 </div>
               );
             })}
           </div>
 
           <Link href={props.project_url} target="_blank">
-          <Button className="text-xl p-7 flex items-center gap-2 mt-10 w-full sm:w-[150px]">
+          <Button className="text-xl p-7 border-2 flex items-center gap-2 mt-10 w-full sm:w-[150px]">
             Visitar site
           </Button>
           </Link>

@@ -22,7 +22,7 @@ const Footer = (props: props) => {
           <div className="mt-36 w-full flex flex-col md:flex-row md:justify-evenly md:items-center">
 
             <div className="text-wrap break-words text-center md:text-left leading-none md:basis-6/12">
-              <p className="font-title font-extrabold">VAMOS INOVAR</p>
+              <p className="font-title font-extrabold dark:text-white">VAMOS INOVAR</p>
               <p className="font-title text-slate-400 font-extrabold">
                 JUNTOS!
               </p>
@@ -33,7 +33,7 @@ const Footer = (props: props) => {
             </div>
           </div>
 
-          <p className="font-subtitle font-bold text-center mt-64 text-gray-600">
+          <p className="font-subtitle font-bold text-center mt-64 text-gray-600 dark:text-slate-300">
             Me siga nas minhas redes
           </p>
 
