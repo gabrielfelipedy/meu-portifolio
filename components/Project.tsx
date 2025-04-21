@@ -76,7 +76,7 @@ const Project = (props: props) => {
               })}
             </div>
 
-            <motion.div className="inline-block w-full sm:w-[150px]" whileHover={{ scale: 1.025 }} whileTap={{ scale: 0.9 }}>
+            <motion.div className="inline-block w-full md:w-[150px]" whileHover={{ scale: 1.025 }} whileTap={{ scale: 0.9 }}>
               <Link href={props.project_url} target="_blank">
                 <Button className="font-small dark:text-dark-200 dark:bg-light-900 py-6 border-2 flex items-center gap-2 mt-10 w-full">
                   Visitar site
