@@ -63,7 +63,7 @@
   }
 
   .img-size {
-    @apply aspect-[1285/934] w-[350px] sm:w-[450px] md:w-[500px] lg:w-[650px] xl:w-[800px];
+    @apply aspect-[1285/934] w-[80vw] xs:w-[450px] sm:w-[600px] md:w-[440px] lg:w-[650px] xl:w-[800px];
   }
 
   .img-hover:hover {

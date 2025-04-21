@@ -34,7 +34,7 @@ const Project = (props: props) => {
         </ScrollApear>
       </div>
 
-      <div className="flex items-center flex-col md:flex-row mt-10">
+      <div className="flex items-center flex-col md:flex-row mt-10 gap-5">
         <ScrollApear>
           <div className="relative md:basis-6/12 img-size">
             <Image
@@ -78,7 +78,7 @@ const Project = (props: props) => {
 
             <motion.div className="inline-block w-full sm:w-[150px]" whileHover={{ scale: 1.025 }} whileTap={{ scale: 0.9 }}>
               <Link href={props.project_url} target="_blank">
-                <Button className="text-xl dark:text-dark-200 dark:bg-light-900 p-7 border-2 flex items-center gap-2 mt-10 w-full">
+                <Button className="font-small dark:text-dark-200 dark:bg-light-900 py-6 border-2 flex items-center gap-2 mt-10 w-full">
                   Visitar site
                 </Button>
               </Link>
