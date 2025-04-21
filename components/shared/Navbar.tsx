@@ -18,8 +18,9 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white supports-[backdrop-filter]:bg-background/60 dark:bg-dark-200 dark:supports-[backdrop-filter]:bg-dark-200/60 backdrop-blur">
+    <header className="sticky top-0 z-50 w-full bg-white supports-[backdrop-filter]:bg-background/60 dark:bg-dark-200 dark:supports-[backdrop-filter]:bg-dark-200/60 backdrop-blur">
       <div className="global-padding-x global-padding-y">
+
         <div className="max-container flex h-8 items-center justify-between">
           <div className="flex items-center">
             <Link
@@ -36,27 +37,27 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm dark:text-white font-medium transition-colors hover:bg-slate-300 dark:hover:bg-dark-300 rounded-lg p-3 "
+                className="text-sm text-light-500 dark:text-white font-medium transition-colors hover:bg-slate-300 dark:hover:bg-dark-300 rounded-lg p-3 "
               >
                 {item.name}
               </Link>
             ))}
           </nav>
 
-          <div className="flex items-center">
+          <div className="flex items-center ml-auto md:ml-0">
             <ThemeToggler />
             {/* <p>language</p> */}
           </div>
 
-          {/* Mobile Navigation */}
+          {/* Menu Icon to open sidebar */}
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon" className="h-9 w-9">
+              <Button variant="default" size="icon" className="h-9 w-9 bg-transparent hover:bg-light-800 dark:hover:bg-dark-100">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className="size-6 dark:fill-white"
+                  className="size-6 fill-black dark:fill-white"
                 >
                   <path
                     fillRule="evenodd"
@@ -67,7 +68,8 @@ export default function Navbar() {
               </Button>
             </SheetTrigger>
 
-            <SheetContent side="left" className="w-[250px] sm:w-[300px]">
+            {/* SideBar */}
+            <SheetContent side="left" className="w-[250px] sm:w-[300px] dark:bg-dark-100 dark:text-light-900">
               <div className="flex flex-col space-y-4 mt-8">
                 <Link
                   href="/"

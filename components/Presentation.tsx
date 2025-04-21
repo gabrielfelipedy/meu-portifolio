@@ -9,14 +9,14 @@ const Presentation = () => {
 
       <div className="max-container flex flex-col z-10 relative">
         <div className="md:w-7/12">
-          <h1 className="font-title mt-96 md:mt-10 dark:text-orange-400">Gabriel Felipe</h1>
-          <p className="text-slate-500 dark:text-slate-300 mt-5 font-monoglyphic text-2xl md:text-3xl md:w-10/12">
+          <h1 className="font-title mt-96 md:mt-10 title-gradient dark:text-light-400">Gabriel Felipe</h1>
+          <p className=" dark:text-slate-300 mt-5 font-monoglyphic text-2xl md:text-3xl md:w-10/12">
             Desenvolvedor de Software e Designer Gráfico
           </p>
         </div>
 
         <div className="md:w-5/12 mt-6 md:mt-20">
-          <p className="font-section paragraph-space text-justify dark:text-white">
+          <p className="font-section paragraph-space text-justify dark:text-light-800">
             Olá, muito prazer! Sou Gabriel Felipe, sou Desenvolvedor de Software
             e Designer gráfico. Utilizo meus conhecimentos e experiência para
             oferecer soluções personalizadas para você.

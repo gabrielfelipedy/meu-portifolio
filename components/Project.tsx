@@ -2,6 +2,8 @@ import Image, { StaticImageData } from "next/image";
 import React from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import ScrollApear from "./animations/ScrollApear";
+// import { motion } from "motion/react"
 
 interface props {
   name: string;
@@ -17,7 +19,7 @@ interface props {
 
 const Project = (props: props) => {
   return (
-    <div className="mt-12 scroll-animation">
+    <ScrollApear>
       <div className="flex flex-col items-center">
         <p className="font-section mt-10 font-bold dark:text-white">{props.name}</p>
         <p className="font-small text-gray-600 dark:text-slate-400">{props.date}</p>
@@ -64,7 +66,7 @@ const Project = (props: props) => {
           </Link>
         </div>
       </div>
-    </div>
+      </ScrollApear>
   );
 };
 

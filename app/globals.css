@@ -17,24 +17,7 @@
   font-family: "monoglyphic", sans-serif;
 }
 
-@keyframes appear {
-  from {
-    opacity: 0;
-    scale: 0.4;
-  }
-  to {
-    opacity: 1;
-    scale: 1;
-  }
-}
-
 @layer utilities {
-
-  .scroll-animation {
-    animation: appear linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 40%;
-  }
 
   .global-padding-x {
     @apply px-4 sm:px-6 lg:px-8;
@@ -95,6 +78,11 @@
     background-position: right 100px;
   }
 
+  .title-gradient
+  {
+    @apply text-transparent bg-clip-text bg-gradient-to-r from-[#262626] to-[#464646];
+  }
+
   /* using after for iOS mobile compatibility */
   .bg-mobile-position:after {
     content: "";
@@ -131,6 +119,11 @@
     background-position: right;
     background-repeat: no-repeat;
   }
+
+  .active-theme {
+    filter: invert(53%) sepia(98%) saturate(3332%) hue-rotate(0deg)
+    brightness(104%) contrast(106%) !important;
+}
 }
 
 @layer base {
