@@ -99,7 +99,7 @@ export default {
   			'dark-200': '2px 0px 20px 0px rgba(39, 36, 36, 0.04)'
   		},
       backgroundImage: {
-        hero: "url('/assets/img/me-no-background.png')",
+        hero: "url('/assets/img/me.png')",
       },
       borderRadius: {
         xl: "calc(var(--radius) + 2px)",

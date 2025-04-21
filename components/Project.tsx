@@ -45,7 +45,7 @@ const Project = (props: props) => {
               return (
                 <div 
                 key={tech_badge.description}
-                className="flex items-center gap-2 border-2 border-slate-400 p-2 rounded-lg dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-dark-400">
+                className="flex items-center gap-2 border-2 border-slate-400 p-2 rounded-lg dark:bg-dark-300 hover:bg-slate-200 dark:hover:bg-dark-400">
                   <Image
                     src={tech_badge.source} // or a remote URL
                     alt="image"

@@ -13,7 +13,7 @@ import Project from "./Project";
 
 const Projects = () => {
   return (
-    <div className="global-padding-x bg-slate-100 dark:bg-dark-200">
+    <div className="global-padding-x bg-slate-100 dark:bg-dark-300">
       <div className="max-container">
         <div className="flex flex-col items-center">
           <h1 className="font-title dark:text-white mt-20 mb-10 text-center">Meus projetos</h1>
