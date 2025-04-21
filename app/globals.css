@@ -105,11 +105,11 @@
     right: 0;
     z-index: -1;
     @apply bg-hero;
-    -webkit-background-size: 80% auto;
-    -moz-background-size: 80% auto;
-    -o-background-size: 80% auto;
+    -webkit-background-size: 70vh auto;
+    -moz-background-size: 70vh auto;
+    -o-background-size: 70vh auto;
     background-size: 70vh auto;
-    background-position: center 100px;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
@@ -128,7 +128,7 @@
     -moz-background-size: contain;
     -o-background-size: contain;
     background-size: contain;
-    background-position: right 100px;
+    background-position: right;
     background-repeat: no-repeat;
   }
 }

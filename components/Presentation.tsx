@@ -1,17 +1,15 @@
 import React from "react";
-import Image from "next/image";
 
-import img_profile from "/public/assets/img/me-no-background.png";
 
 const Presentation = () => {
   return (
-    <div className="global-padding-x bg-mobile-position md:bg-position h-auto min-h-[100vh] bg-fixed relative overflow-hidden dark:bg-dark-300">
+    <div className="global-padding-x bg-mobile-position md:bg-position h-auto min-h-[100vh] bg-fixed relative overflow-hidden">
 
-      <div className="absolute inset-0 bg-[linear-gradient(transparent_1%,white_65%)] md:bg-[linear-gradient(transparent_45%,white_95%)] dark:hidden"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(transparent_1%,white_65%)] md:bg-[linear-gradient(transparent_45%,white_95%)] dark:bg-[linear-gradient(transparent_1%,theme(colors.dark.200)_65%)] dark:md:bg-[linear-gradient(transparent_45%,theme(colors.dark.200)_95%)]"></div>
 
       <div className="max-container flex flex-col z-10 relative">
         <div className="md:w-7/12">
-          <h1 className="font-title mt-72 md:mt-10 dark:text-orange-400">Gabriel Felipe</h1>
+          <h1 className="font-title mt-96 md:mt-10 dark:text-orange-400">Gabriel Felipe</h1>
           <p className="text-slate-500 dark:text-slate-300 mt-5 font-monoglyphic text-2xl md:text-3xl md:w-10/12">
             Desenvolvedor de Software e Designer Gráfico
           </p>

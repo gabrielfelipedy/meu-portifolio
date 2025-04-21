@@ -35,7 +35,7 @@ export default function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium transition-colors hover:bg-slate-300 rounded-lg p-3 "
+                className="text-sm dark:text-white font-medium transition-colors hover:bg-slate-300 dark:hover:bg-dark-300 rounded-lg p-3 "
               >
                 {item.name}
               </Link>
@@ -63,7 +63,7 @@ export default function Navbar() {
                   className="font-semibold monoglyphic text-lg mb-4"
                   onClick={() => setIsOpen(false)}
                 >
-                  Gabriel Felipe
+                  GF
                 </Link>
                 {navItems.map((item) => (
                   <Link
