@@ -6,11 +6,11 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      <section>
+      <section id="home" className="scroll-mt-20">
         <Presentation />
       </section>
 
-      <section id="projects" className="scroll-mt-20">
+      <section id="projects" className="">
         <Projects />
       </section>
 

@@ -4,6 +4,7 @@ import { Button } from "./ui/button";
 import Link from "next/link";
 import ScrollApear from "./animations/ScrollApear";
 // import { motion } from "motion/react"
+import * as motion from "motion/react-client";
 
 interface props {
   name: string;
@@ -19,54 +20,76 @@ interface props {
 
 const Project = (props: props) => {
   return (
-    <ScrollApear>
+    <div className="mt-80">
       <div className="flex flex-col items-center">
-        <p className="font-section mt-10 font-bold dark:text-white">{props.name}</p>
-        <p className="font-small text-gray-600 dark:text-slate-400">{props.date}</p>
-      </div>
-
-      <div className="flex items-center flex-col lg:flex-row">
-        <div className="relative lg:basis-3/5 img-size">
-          <Image
-            src={props.image_src}
-            alt="instagram"
-            layout="fill"
-            className="object-contain object-center rounded-lg img-hover flex-shrink-0"
-          />
-        </div>
-
-        <div className="lg:basis-2/5 flex flex-col justify-center mb-32">
-          <p className="font-section mt-10 dark:text-white">
-            {props.description}
+        <ScrollApear>
+          <p className="font-section mt-10 font-bold dark:text-white">
+            {props.name}
           </p>
-
-          <p className="font-small font-bold mt-10 dark:text-slate-200">Tecnologias utilizadas</p>
-
-          <div className="mt-5 flex gap-5">
-            {props.tech_icons.map((tech_badge) => {
-              return (
-                <div 
-                key={tech_badge.description}
-                className="flex items-center gap-2 border-2 border-slate-400 p-2 rounded-lg dark:bg-dark-300 hover:bg-slate-200 dark:hover:bg-dark-400">
-                  <Image
-                    src={tech_badge.source} // or a remote URL
-                    alt="image"
-                    className="w-6 object-contain"
-                  />
-                  <span className="dark:text-slate-200">{tech_badge.description}</span>
-                </div>
-              );
-            })}
-          </div>
-
-          <Link href={props.project_url} target="_blank">
-          <Button className="text-xl p-7 border-2 flex items-center gap-2 mt-10 w-full sm:w-[150px]">
-            Visitar site
-          </Button>
-          </Link>
-        </div>
+        </ScrollApear>
+        <ScrollApear>
+          <p className="font-small text-gray-600 dark:text-slate-400">
+            {props.date}
+          </p>
+        </ScrollApear>
       </div>
-      </ScrollApear>
+
+      <div className="flex items-center flex-col md:flex-row mt-10">
+        <ScrollApear>
+          <div className="relative md:basis-6/12 img-size">
+            <Image
+              src={props.image_src}
+              alt="instagram"
+              layout="fill"
+              className="object-contain object-center rounded-lg img-hover flex-shrink-0"
+            />
+          </div>
+        </ScrollApear>
+
+        <ScrollApear>
+          <div className="md:basis-6/12 flex flex-col justify-center mb-32">
+            <p className="font-section mt-10 dark:text-white">
+              {props.description}
+            </p>
+
+            <p className="font-small font-bold mt-10 dark:text-slate-200">
+              Tecnologias utilizadas
+            </p>
+
+            <div className="mt-5 flex gap-5">
+              {props.tech_icons.map((tech_badge) => {
+                return (
+                  <div
+                    key={tech_badge.description}
+                    className="flex items-center gap-2 border-[1px] dark:border-dark-100 border-slate-400 p-2 rounded-lg dark:bg-dark-500 hover:bg-slate-200 dark:hover:bg-dark-400"
+                  >
+                    <Image
+                      src={tech_badge.source} // or a remote URL
+                      alt="image"
+                      className="w-6 object-contain"
+                    />
+                    <span className="dark:text-slate-200">
+                      {tech_badge.description}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
+
+            <Link href={props.project_url} target="_blank">
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <Button className="text-xl dark:text-dark-200 dark:bg-light-900 p-7 border-2 flex items-center gap-2 mt-10 w-full sm:w-[150px]">
+                  Visitar site
+                </Button>
+              </motion.button>
+            </Link>
+          </div>
+        </ScrollApear>
+      </div>
+    </div>
   );
 };
 
