@@ -65,7 +65,7 @@ export default function ContactForm() {
   }
 
   return (
-    <Card className="w-full mx-auto dark:bg-black">
+    <Card className="w-full mx-auto dark:bg-black dark:border-none">
       <CardContent className="p-8">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -77,7 +77,7 @@ export default function ContactForm() {
                   <FormItem>
                     <FormLabel className="dark:text-white">Email</FormLabel>
                     <FormControl>
-                      <Input placeholder="email@example.com" {...field} />
+                      <Input className="dark:border-[1px] dark:border-slate-400" placeholder="email@example.com" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -91,7 +91,7 @@ export default function ContactForm() {
                   <FormItem>
                     <FormLabel className="dark:text-white" >Assunto</FormLabel>
                     <FormControl>
-                      <Input placeholder="Seu assunto" {...field} />
+                      <Input className="dark:border-[1px] dark:border-slate-400" placeholder="Seu assunto" {...field} />
                     </FormControl>
                     <FormMessage />
                   </FormItem>
@@ -108,7 +108,7 @@ export default function ContactForm() {
                   <FormControl>
                     <Textarea
                       placeholder="Me diga a sua proposta"
-                      className="min-h-[120px]"
+                      className="min-h-[120px] dark:border-[1px] dark:border-slate-400"
                       {...field}
                     />
                   </FormControl>
@@ -117,7 +117,7 @@ export default function ContactForm() {
               )}
             />
 
-            <Button type="submit" className="w-full" disabled={isSubmitting}>
+            <Button type="submit" className="w-full dark:bg-white dark:text-black" disabled={isSubmitting}>
               {isSubmitting ? "Enviando..." : "Enviar"}
             </Button>
           </form>
