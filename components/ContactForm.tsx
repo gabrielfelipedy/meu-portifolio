@@ -65,7 +65,7 @@ export default function ContactForm() {
   }
 
   return (
-    <Card className="w-full mx-auto">
+    <Card className="w-full mx-auto dark:bg-black">
       <CardContent className="p-8">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
@@ -75,7 +75,7 @@ export default function ContactForm() {
                 name="email"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Email</FormLabel>
+                    <FormLabel className="dark:text-white">Email</FormLabel>
                     <FormControl>
                       <Input placeholder="email@example.com" {...field} />
                     </FormControl>
@@ -89,7 +89,7 @@ export default function ContactForm() {
                 name="subject"
                 render={({ field }) => (
                   <FormItem>
-                    <FormLabel>Assunto</FormLabel>
+                    <FormLabel className="dark:text-white" >Assunto</FormLabel>
                     <FormControl>
                       <Input placeholder="Seu assunto" {...field} />
                     </FormControl>
@@ -104,7 +104,7 @@ export default function ContactForm() {
               name="message"
               render={({ field }) => (
                 <FormItem>
-                  <FormLabel>Seu pedido</FormLabel>
+                  <FormLabel className="dark:text-white">Seu pedido</FormLabel>
                   <FormControl>
                     <Textarea
                       placeholder="Me diga a sua proposta"
