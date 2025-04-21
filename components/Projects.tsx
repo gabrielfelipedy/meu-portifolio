@@ -10,18 +10,22 @@ import tailwindcss_icon from "/public/assets/icons/tailwindcss.svg";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import Project from "./Project";
+import ScrollApear from "./animations/ScrollApear";
 
 const Projects = () => {
   return (
     <div className="global-padding-x bg-slate-100 dark:bg-dark-300">
       <div className="max-container">
         <div className="flex flex-col items-center">
-          <h1 className="font-title title-gradient dark:text-white mt-20 mb-10 text-center">Meus projetos</h1>
+          <h1 className="font-title title-gradient dark:text-white mt-52 mb-10 text-center">
+            Meus projetos
+          </h1>
 
-          <p className="text-light-700 font-subtitle text-center lg:w-6/12 w-9/12">
-            Aqui você encontrará projetos que já fiz para diversos públicos e
-            clientes
-          </p>
+          <div className="w-full flex justify-center">
+            <p className="text-light-700 font-subtitle text-center">
+              Aqui você encontrará meus projetos mais relevantes
+            </p>
+          </div>
         </div>
 
         <Project
@@ -29,17 +33,13 @@ const Projects = () => {
           date="31 de Setembro de 2024 - Agora"
           image_src={amparo}
           description="Uma Landing Page feita para o Instituto Amparo, um centro de tratamento e de saúde mental."
-          tech_icons={
-            [
-              {
-                source: nextjs_icon, 
-                description: "NextJS"
-              }, 
-              { source: tailwindcss_icon, 
-                description: "TailwindCSS"
-              }
-            ]
-          }
+          tech_icons={[
+            {
+              source: nextjs_icon,
+              description: "NextJS",
+            },
+            { source: tailwindcss_icon, description: "TailwindCSS" },
+          ]}
           project_url="https://lp-institutoamparo.vercel.app"
         />
 
@@ -48,17 +48,13 @@ const Projects = () => {
           date="31 de Setembro de 2024 - Agora"
           image_src={camila}
           description="Uma Landing Page criada para a Dra. Camila Neiva divulgar seu trabalho na área da Psicologia e da Psiquiatria."
-          tech_icons={
-            [
-              {
-                source: nextjs_icon, 
-                description: "NextJS"
-              }, 
-              { source: tailwindcss_icon, 
-                description: "TailwindCSS"
-              }
-            ]
-          }
+          tech_icons={[
+            {
+              source: nextjs_icon,
+              description: "NextJS",
+            },
+            { source: tailwindcss_icon, description: "TailwindCSS" },
+          ]}
           project_url="https://lp-camilaneiva.vercel.app"
         />
       </div>

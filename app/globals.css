@@ -63,7 +63,7 @@
   }
 
   .img-size {
-    @apply w-[350px] h-[254.3px] sm:w-[500px] sm:h-[363.4px] md:w-[800px] md:h-[581.4px] lg:w-[900px] lg:h-[654.1px] xl:w-[1000px] xl:h-[726.8px];
+    @apply aspect-[1285/934] w-[350px] sm:w-[450px] md:w-[500px] lg:w-[650px] xl:w-[800px];
   }
 
   .img-hover:hover {
@@ -128,6 +128,18 @@
 
 @layer base {
   :root {
+    --xl-img-w: 900px;
+    --lg-img-w: 800px;
+    --md-img-w: 700px;
+    --sm-img-w: 600px;
+    --img-w: 500px;
+
+    --xl-img-h: calc(var(--xl-img-w) * 934 / 1285);
+    --lg-img-h: calc(var(--lg-img-w) * 934 / 1285);
+    --md-img-h: calc(var(--md-img-w) * 934 / 1285);
+    --sm-img-h: calc(var(--sm-img-w) * 934 / 1285);
+    --img-h: calc(var(--img-w) * 934 / 1285);
+
     --background: 0 0% 100%;
     --foreground: 0 0% 3.9%;
     --card: 0 0% 100%;
