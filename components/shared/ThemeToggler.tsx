@@ -43,7 +43,7 @@ const ThemeToggler = () => {
             }}
             className="flex items-center gap-4 p-2 dark:focus:bg-dark-400">
                 <Image 
-                src={theme.icon}
+                src={theme.svg}
                 alt={theme.value}
                 width={16}
                 height={16}

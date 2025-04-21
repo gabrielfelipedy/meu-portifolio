@@ -5,7 +5,7 @@ const Presentation = () => {
   return (
     <div className="global-padding-x bg-mobile-position md:bg-position h-auto min-h-[100vh] bg-fixed relative overflow-hidden">
 
-      <div className="absolute inset-0 bg-[linear-gradient(transparent_1%,white_65%)] md:bg-[linear-gradient(transparent_45%,white_95%)] dark:bg-[linear-gradient(transparent_1%,theme(colors.dark.200)_65%)] dark:md:bg-[linear-gradient(transparent_45%,theme(colors.dark.200)_95%)]"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(transparent_1%,white_65%)] md:bg-[linear-gradient(transparent_45%,white_95%)] dark:bg-[linear-gradient(transparent_1%,theme(colors.dark.100)_65%)] dark:md:bg-[linear-gradient(transparent_45%,theme(colors.dark.100)_95%)]"></div>
 
       <div className="max-container flex flex-col z-10 relative">
         <div className="md:w-7/12">
@@ -16,7 +16,7 @@ const Presentation = () => {
         </div>
 
         <div className="md:w-5/12 mt-6 md:mt-20">
-          <p className="font-section paragraph-space text-justify dark:text-orange-400">
+          <p className="font-section paragraph-space text-justify dark:text-white">
             Olá, muito prazer! Sou Gabriel Felipe, sou Desenvolvedor de Software
             e Designer gráfico. Utilizo meus conhecimentos e experiência para
             oferecer soluções personalizadas para você.
