@@ -91,25 +91,12 @@
     bottom: 0; /* new: stretches to bottom */
     z-index: -1;
     @apply bg-hero;
-    background-size: 60vh auto;
+    background-size: 65vh auto;
     background-position: center top;
     background-repeat: no-repeat;
   }
 
-  .sm-bg-mobile-position:after {
-    content: "";
-    position: absolute; /* changed from fixed */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0; /* new: stretches to bottom */
-    z-index: -1;
-    @apply bg-hero;
-    background-size: 65vh auto;
-    background-position: right top;
-    background-repeat: no-repeat;
-  }
-
+  
   .md-bg-position::after {
     content: "";
     position: absolute; /* changed from fixed */
