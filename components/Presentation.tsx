@@ -3,7 +3,7 @@ import FadeOnScroll from "./animations/FadeOnScroll";
 
 const Presentation = () => {
   return (
-    <div className="global-padding-x min-w-[375px] min-h-[667px] md:min-h-[400px] lg:min-h-[90vh] relative overflow-hidden">
+    <div className="flex global-padding-x min-w-[375px] min-h-[667px] md:min-h-[400px] lg:min-h-[90vh] relative overflow-hidden">
       
       <FadeOnScroll>
         <div className="bg-position md:md-bg-position lg:lg-bg-position"></div>
@@ -12,6 +12,8 @@ const Presentation = () => {
       <div className="absolute inset-0 bg-[linear-gradient(transparent_1%,white_65%)] md:bg-[linear-gradient(transparent_45%,white_95%)] dark:bg-[linear-gradient(transparent_1%,theme(colors.dark.100)_65%)] dark:md:bg-[linear-gradient(transparent_45%,theme(colors.dark.100)_95%)]"></div>
 
       <div className="max-container flex flex-col z-10 relative">
+
+        <div className="mt-auto mb-10">
         <div className="md:w-7/12">
           <h1 className="font-title mt-72 md:mt-10 lg:mt-32 text-light-400">
             Gabriel Felipe
@@ -31,6 +33,7 @@ const Presentation = () => {
             e Designer gráfico. Utilizo meus conhecimentos e experiência para
             oferecer soluções personalizadas para você.
           </p>
+        </div>
         </div>
 
         {/* <div className="relative w-[200px] h-[200px] md:w-[600px] md:h-[700px]">
