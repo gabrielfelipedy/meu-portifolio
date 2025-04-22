@@ -3,7 +3,7 @@ import FadeOnScroll from "./animations/FadeOnScroll";
 
 const Presentation = () => {
   return (
-    <div className="global-padding-x min-h-[70vh] md:min-h-[70vh] lg:min-h-[90vh] relative overflow-hidden">
+    <div className="global-padding-x min-w-[375px] min-h-[667px] md:min-h-[400px] lg:min-h-[90vh] relative overflow-hidden">
       
       <FadeOnScroll>
         <div className="bg-position md:md-bg-position lg:lg-bg-position"></div>
