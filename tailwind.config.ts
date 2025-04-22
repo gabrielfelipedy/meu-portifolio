@@ -76,7 +76,7 @@ export default {
       fontSize: {
         title_xl: "70pt",
         title_lg: "60pt",
-        title_md: "50pt",
+        title_md: "45pt",
         title_sm: "45pt",
         title: "35pt",
         subtitle_xl: "30pt",
@@ -86,8 +86,8 @@ export default {
         subtitle: "18pt",
         section_xl: "18pt",
         section_lg: "17pt",
-        section_md: "16pt",
-        section_sm: "15pt",
+        section_md: "14pt",
+        section_sm: "13pt",
         section: "14pt",
         small_xl: "14pt",
         small_lg: "13.5pt",
@@ -103,7 +103,7 @@ export default {
   			'dark-200': '2px 0px 20px 0px rgba(39, 36, 36, 0.04)'
   		},
       backgroundImage: {
-        hero: "url('/assets/img/me.png')",
+        hero: "url('/assets/img/me.webp')",
       },
       borderRadius: {
         xl: "calc(var(--radius) + 2px)",
