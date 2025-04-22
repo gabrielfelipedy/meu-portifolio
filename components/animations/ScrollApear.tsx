@@ -22,7 +22,7 @@ export default function ScrollApear({ children }: { children: React.ReactNode })
   return (
     <motion.div
       ref={ref}
-      initial={{ opacity: 0, scale: 0.8 }}
+      initial={{ opacity: 0, scale: 0.9 }}
       animate={controls}
     >
       {children}
