@@ -109,7 +109,7 @@ export default function Navbar() {
               <div className="flex flex-col space-y-4 mt-8">
                 <Link
                   href="/"
-                  className="font-semibold monoglyphic text-lg mb-4"
+                  className="font-semibold monoglyphic text-lg mb-4 px-5 py-3"
                   onClick={() => setIsOpen(false)}
                 >
                   <Image
@@ -123,7 +123,7 @@ export default function Navbar() {
                   <Link
                     key={item.name}
                     href={item.href}
-                    className="text-sm font-medium transition-colors hover:text-primary py-2"
+                    className="font-small rounded-lg transition-colors hover:bg-light-500 px-5 py-3"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}

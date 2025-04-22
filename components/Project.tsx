@@ -20,21 +20,31 @@ interface props {
 
 const Project = (props: props) => {
   return (
-    <div className="mt-80">
+    <div className="mt-32 md:mt-80">
       <div className="flex flex-col items-center">
-        <ScrollApear>
-          <p className="font-section mt-10 font-bold dark:text-white">
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+          viewport={{ once: true }}
+        >
+          <p className="font-subtitle mt-10 font-bold dark:text-white">
             {props.name}
           </p>
-        </ScrollApear>
-        <ScrollApear>
-          <p className="font-small text-gray-600 dark:text-slate-400">
+        </motion.div>
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 2 }}
+          viewport={{ once: true }}
+        >
+          <p className="font-section text-gray-600 dark:text-slate-400">
             {props.date}
           </p>
-        </ScrollApear>
+        </motion.div>
       </div>
 
-      <div className="flex items-center flex-col md:flex-row mt-10 gap-5">
+      <div className="flex items-center flex-col md:flex-row mt-20 gap-5">
         <ScrollApear>
           <div className="relative md:basis-6/12 img-size">
             <Image
@@ -76,7 +86,11 @@ const Project = (props: props) => {
               })}
             </div>
 
-            <motion.div className="inline-block w-full md:w-[150px]" whileHover={{ scale: 1.025 }} whileTap={{ scale: 0.9 }}>
+            <motion.div
+              className="inline-block w-full md:w-[150px]"
+              whileHover={{ scale: 1.025 }}
+              whileTap={{ scale: 0.9 }}
+            >
               <Link href={props.project_url} target="_blank">
                 <Button className="font-small dark:text-dark-200 dark:bg-light-900 py-6 border-2 flex items-center gap-2 mt-10 w-full">
                   Visitar site

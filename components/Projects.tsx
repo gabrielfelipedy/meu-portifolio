@@ -11,20 +11,35 @@ import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import Project from "./Project";
 import ScrollApear from "./animations/ScrollApear";
+import * as motion from "motion/react-client";
 
 const Projects = () => {
   return (
     <div className="global-padding-x bg-slate-100 dark:bg-dark-300">
       <div className="max-container">
         <div className="flex flex-col items-center">
-          <h1 className="font-title title-gradient dark:text-white mt-52 mb-10 text-center">
-            Meus projetos
-          </h1>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 5 }}
+            viewport={{ once: true }}
+          >
+            <h1 className="font-title title-gradient dark:text-white mt-20 md:mt-52 mb-10 text-center">
+              Meus projetos
+            </h1>
+          </motion.div>
 
           <div className="w-full flex justify-center">
-            <p className="text-light-700 font-subtitle text-center">
-              Aqui você encontrará meus projetos mais relevantes
-            </p>
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 5 }}
+              viewport={{ once: true }}
+            >
+              <p className="text-light-700 font-subtitle text-center">
+                Aqui você encontrará meus projetos mais relevantes
+              </p>
+            </motion.div>
           </div>
         </div>
 
