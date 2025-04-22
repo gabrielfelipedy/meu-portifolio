@@ -71,6 +71,7 @@ export default {
         },
       },
       fontFamily: {
+        inter: ["Inter", "sans-serif"],
         monoglyphic: ["monoglyphic", "sans-serif"]
       },
       fontSize: {
