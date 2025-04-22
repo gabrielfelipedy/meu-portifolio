@@ -1,19 +1,22 @@
 import React from "react";
 import FadeOnScroll from "./animations/FadeOnScroll";
 
-
 const Presentation = () => {
   return (
-    <FadeOnScroll>
-    <div className="global-padding-x bg-position md:md-bg-position lg:lg-bg-position min-h-[70vh] md:min-h-[70vh] lg:min-h-[90vh] relative overflow-hidden">
+    <div className="global-padding-x min-h-[70vh] md:min-h-[70vh] lg:min-h-[90vh] relative overflow-hidden">
+      
+      <FadeOnScroll>
+        <div className="bg-position md:md-bg-position lg:lg-bg-position"></div>
+      </FadeOnScroll>
 
       <div className="absolute inset-0 bg-[linear-gradient(transparent_1%,white_65%)] md:bg-[linear-gradient(transparent_45%,white_95%)] dark:bg-[linear-gradient(transparent_1%,theme(colors.dark.100)_65%)] dark:md:bg-[linear-gradient(transparent_45%,theme(colors.dark.100)_95%)]"></div>
 
       <div className="max-container flex flex-col z-10 relative">
         <div className="md:w-7/12">
-        
-          <h1 className="font-title mt-72 md:mt-10 lg:mt-32 text-light-400">Gabriel Felipe</h1>
-          
+          <h1 className="font-title mt-72 md:mt-10 lg:mt-32 text-light-400">
+            Gabriel Felipe
+          </h1>
+
           <p className=" dark:text-slate-300 mt-5 font-monoglyphic text-2xl lg:text-3xl md:w-10/12">
             Desenvolvedor de Software
           </p>
@@ -40,7 +43,6 @@ const Presentation = () => {
         </div> */}
       </div>
     </div>
-    </FadeOnScroll>
   );
 };
 
