@@ -3,13 +3,13 @@ import FadeOnScroll from "./animations/FadeOnScroll";
 
 const Presentation = () => {
   return (
-    <div className="flex global-padding-x min-w-[375px] min-h-[667px] md:min-h-[400px] lg:min-h-[90vh] relative overflow-hidden">
+    <div className="flex global-padding-x min-w-[375px] min-h-[667px] md:min-h-[400px] lg:min-h-[95vh] relative overflow-hidden">
       
       <FadeOnScroll>
         <div className="bg-position md:md-bg-position lg:lg-bg-position"></div>
       </FadeOnScroll>
 
-      <div className="absolute inset-0 bg-[linear-gradient(transparent_1%,white_65%)] md:bg-[linear-gradient(transparent_45%,white_95%)] dark:bg-[linear-gradient(transparent_1%,theme(colors.dark.100)_65%)] dark:md:bg-[linear-gradient(transparent_45%,theme(colors.dark.100)_95%)]"></div>
+      <div className="absolute inset-0 bg-[linear-gradient(transparent_1%,theme(colors.light.900)_65%)] md:bg-[linear-gradient(transparent_45%,theme(colors.light.900)_95%)] dark:bg-[linear-gradient(transparent_1%,theme(colors.dark.400)_65%)] dark:md:bg-[linear-gradient(transparent_45%,theme(colors.dark.400)_95%)]"></div>
 
       <div className="max-container flex flex-col z-10 relative">
 

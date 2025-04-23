@@ -19,7 +19,7 @@ export default function RootLayout({
   return (
     <html className="scroll-smooth" lang="pt-BR">
       <body
-        className={`font-inter bg-light-900 dark:bg-dark-100`}
+        className={`font-inter bg-light-900 dark:bg-dark-400`}
       >
         <ThemeProvider>
           <Navbar />

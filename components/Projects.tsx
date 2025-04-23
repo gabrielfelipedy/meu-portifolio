@@ -15,32 +15,32 @@ import * as motion from "motion/react-client";
 
 const Projects = () => {
   return (
-    <div className="global-padding-x bg-slate-100 dark:bg-dark-300">
+    <div className="global-padding-x bg-light-900 dark:bg-dark-400">
       <div className="max-container">
-        <div className="flex flex-col items-center">
+
+        <div className="flex flex-col">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 5 }}
+            viewport={{ once: true }}
+            className="mt-20 md:mt-52 mb-4"
+          >
+            <p className="text-light-700 dark:text-light-800 font-subtitle">
+              Projetos selecionados
+            </p>
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 5 }}
             viewport={{ once: true }}
           >
-            <h1 className="font-title title-gradient dark:text-white mt-20 md:mt-52 mb-10 text-center">
-              Meus projetos
+            <h1 className="font-title pb-2 title-gradient dark:text-white">
+              Websites
             </h1>
           </motion.div>
-
-          <div className="w-full flex justify-center">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 5 }}
-              viewport={{ once: true }}
-            >
-              <p className="text-light-700 font-subtitle text-center">
-                Aqui você encontrará meus projetos mais relevantes
-              </p>
-            </motion.div>
-          </div>
         </div>
 
         <Project
@@ -72,6 +72,31 @@ const Projects = () => {
           ]}
           project_url="https://lp-camilaneiva.vercel.app"
         />
+
+        <div className="flex flex-col">
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 5 }}
+            viewport={{ once: true }}
+            className="mt-20 md:mt-52 mb-4"
+          >
+            <p className="text-light-700 font-subtitle">
+              Arte e Design
+            </p>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 5 }}
+            viewport={{ once: true }}
+          >
+            <h1 className="font-title pb-2 title-gradient dark:text-white">
+              Flyers e Anúncios
+            </h1>
+          </motion.div>
+        </div>
       </div>
     </div>
   );

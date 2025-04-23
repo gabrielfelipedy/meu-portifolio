@@ -20,7 +20,7 @@ interface props {
 
 const Project = (props: props) => {
   return (
-    <div className="mt-32 md:mt-80">
+    <div className="mt-32 md:mt-64">
       <div className="flex flex-col items-center">
         <motion.div
           initial={{ opacity: 0 }}

@@ -65,7 +65,7 @@ export default function ContactForm() {
   }
 
   return (
-    <Card className="w-full mx-auto dark:bg-transparent border-none">
+    <Card className="w-full mx-auto bg-transparent border-none">
       <CardContent className="p-8">
         <Form {...form}>
           <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
