@@ -12,6 +12,7 @@ import { Badge } from "./ui/badge";
 import Project from "./Project";
 import ScrollApear from "./animations/ScrollApear";
 import * as motion from "motion/react-client";
+import ImageGallery from "./ImageGallery";
 
 const Projects = () => {
   return (
@@ -97,6 +98,8 @@ const Projects = () => {
             </h1>
           </motion.div>
         </div>
+
+        <ImageGallery />
       </div>
     </div>
   );
