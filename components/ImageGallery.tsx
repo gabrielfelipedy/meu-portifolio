@@ -1,18 +1,44 @@
 import React from "react";
 import Image from "next/image";
 
-import model_img from "/public/assets/img/model.jpg";
+import delicia_chopp from "/public/assets/img/design/delicia_chopp/Cardápio - Frente.png";
+import banner_pai from "/public/assets/img/design/banner_pai.jpg";
+import churrascaria from "/public/assets/img/design/flyer_churrascaria.png";
 
 const ImageGallery = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-20">
-      <Image src={model_img} alt="model_img" className="rounded-[0.75rem]" />
+    <div className="flex gap-4 mt-20">
 
-      <Image src={model_img} alt="model_img" className="rounded-[0.75rem]" />
+      <div className="w-full">
+        <div className="relative aspect-video w-full">
+          <Image
+            src={banner_pai}
+            alt="banner_pai"
+            className="object-cover object-center rounded-[0.75rem]"
+            layout="fill"
+          />
+        </div>
 
-      <Image src={model_img} alt="model_img" className="rounded-[0.75rem]" />
+        <div className="relative aspect-square w-full mt-4">
+          <Image
+            src={delicia_chopp}
+            alt="delicia_chopp"
+            className="object-contain object-center rounded-[0.75rem]"
+            layout="fill"
+          />
+        </div>
+      </div>
 
-      <Image src={model_img} alt="model_img" className="rounded-[0.75rem]" />
+      <div className="w-full">
+        <div className="relative aspect-[4/5] w-full">
+          <Image
+            src={churrascaria}
+            alt="churrascaria"
+            className="object-cover object-center rounded-[0.75rem]"
+            layout="fill"
+          />
+        </div>
+      </div>
     </div>
   );
 };
