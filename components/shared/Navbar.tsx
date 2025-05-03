@@ -13,12 +13,7 @@ import ThemeToggler from "./ThemeToggler";
 import Image from "next/image";
 
 import * as motion from "motion/react-client";
-
-const navItems = [
-  { name: "Início", href: "#home" },
-  { name: "Projetos", href: "#projects" },
-  { name: "Contato", href: "#contact" },
-];
+import { navItems } from "@/constants";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false);

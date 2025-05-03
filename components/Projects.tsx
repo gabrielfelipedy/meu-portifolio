@@ -23,23 +23,23 @@ const Projects = () => {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 5 }}
+            transition={{ duration: 2 }}
             viewport={{ once: true }}
             className="mt-20 md:mt-52 mb-4"
           >
             <p className="text-light-700 dark:text-light-800 font-subtitle">
-              Projetos selecionados
+              Landing pages e sistemas web
             </p>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 5 }}
+            transition={{ duration: 2 }}
             viewport={{ once: true }}
           >
             <h1 className="font-title pb-2 title-gradient dark:text-white">
-              Websites
+              Projetos relevantes
             </h1>
           </motion.div>
         </div>
@@ -78,23 +78,23 @@ const Projects = () => {
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 5 }}
+            transition={{ duration: 2 }}
             viewport={{ once: true }}
             className="mt-20 md:mt-52 mb-4"
           >
             <p className="text-light-700 font-subtitle">
-              Arte e Design
+              Flyers, posters e anúncios
             </p>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            transition={{ duration: 5 }}
+            transition={{ duration: 2 }}
             viewport={{ once: true }}
           >
             <h1 className="font-title pb-2 title-gradient dark:text-white">
-              Flyers e Anúncios
+              Design Gráfico
             </h1>
           </motion.div>
         </div>
