@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html className="scroll-smooth" lang="pt-BR">
       <ThemeProvider>
-        <body className={`bg-light-900 dark:bg-dark-400`}>
+        <body>
           <Navbar />
           <main className="px-3">{children}</main>
           <Footer className="pb-10 px-3" />
