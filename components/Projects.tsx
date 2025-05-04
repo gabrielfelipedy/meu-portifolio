@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
 import Image from "next/image";
 
 import amparo from "/public/assets/img/amparo.png";
@@ -10,69 +12,89 @@ import tailwindcss_icon from "/public/assets/icons/tailwindcss.svg";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import Project from "./Project";
-import ScrollApear from "./animations/ScrollApear";
-import * as motion from "motion/react-client";
+import ImageGallery from "./ImageGallery";
+
+import { gsap } from "gsap/gsap-core";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
+
+if (typeof window !== "undefined") {
+  gsap.registerPlugin(useGSAP, ScrollTrigger);
+}
 
 const Projects = () => {
+  const container = useRef<HTMLElement | any>();
+
+  useGSAP(
+    () => {
+      gsap.to(`.landing-pages`, {
+        scrollTrigger: `.landing-pages`,
+        opacity: 1,
+        duration: 0.75,
+        delay: 0.1,
+      });
+    },
+    { scope: container }
+  );
+
   return (
-    <div className="global-padding-x bg-slate-100 dark:bg-dark-300">
-      <div className="max-container">
-        <div className="flex flex-col items-center">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 5 }}
-            viewport={{ once: true }}
-          >
-            <h1 className="font-title title-gradient dark:text-white mt-20 md:mt-52 mb-10 text-center">
-              Meus projetos
-            </h1>
-          </motion.div>
+    <div
+      className=" bg-light-900 dark:bg-dark-400 max-container"
+      ref={container}
+    >
+      <div className="flex flex-col landing-pages opacity-0">
+        <p className="dark:text-light-800 font-small tracking-widest">
+          LANDING PAGES
+        </p>
 
-          <div className="w-full flex justify-center">
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              transition={{ duration: 5 }}
-              viewport={{ once: true }}
-            >
-              <p className="text-light-700 font-subtitle text-center">
-                Aqui você encontrará meus projetos mais relevantes
-              </p>
-            </motion.div>
-          </div>
-        </div>
-
-        <Project
-          name="Instituto Amparo"
-          date="31 de Setembro de 2024 - Agora"
-          image_src={amparo}
-          description="Uma Landing Page feita para o Instituto Amparo, um centro de tratamento e de saúde mental."
-          tech_icons={[
-            {
-              source: nextjs_icon,
-              description: "NextJS",
-            },
-            { source: tailwindcss_icon, description: "TailwindCSS" },
-          ]}
-          project_url="https://lp-institutoamparo.vercel.app"
-        />
-
-        <Project
-          name="Landing Page Dra. Camila Neiva"
-          date="31 de Setembro de 2024 - Agora"
-          image_src={camila}
-          description="Uma Landing Page criada para a Dra. Camila Neiva divulgar seu trabalho na área da Psicologia e da Psiquiatria."
-          tech_icons={[
-            {
-              source: nextjs_icon,
-              description: "NextJS",
-            },
-            { source: tailwindcss_icon, description: "TailwindCSS" },
-          ]}
-          project_url="https://lp-camilaneiva.vercel.app"
-        />
+        <h1 className="font-title pb-2 title-gradient dark:text-light-400">
+          Projetos relevantes
+        </h1>
       </div>
+
+      <Project
+        id={1}
+        name="Instituto Amparo"
+        date="31 de Setembro de 2024 - Agora"
+        image_src={amparo}
+        description="Uma Landing Page feita para o Instituto Amparo, um centro de tratamento e de saúde mental."
+        tech_icons={[
+          {
+            source: nextjs_icon,
+            description: "NextJS",
+          },
+          { source: tailwindcss_icon, description: "TailwindCSS" },
+        ]}
+        project_url="https://lp-institutoamparo.vercel.app"
+      />
+
+      <Project
+        id={2}
+        name="Dra. Camila Neiva"
+        date="31 de Setembro de 2024 - Agora"
+        image_src={camila}
+        description="Uma Landing Page criada para a Dra. Camila Neiva divulgar seu trabalho na área da Psicologia e da Psiquiatria."
+        tech_icons={[
+          {
+            source: nextjs_icon,
+            description: "NextJS",
+          },
+          { source: tailwindcss_icon, description: "TailwindCSS" },
+        ]}
+        project_url="https://lp-camilaneiva.vercel.app"
+      />
+
+      {/* <div className="flex flex-col">
+          <p className="text-light-700 font-subtitle">
+            Flyers, posters e anúncios
+          </p>
+
+          <h1 className="font-title pb-2 title-gradient dark:text-white">
+            Design Gráfico
+          </h1>
+        </div> */}
+
+      {/* <ImageGallery /> */}
     </div>
   );
 };

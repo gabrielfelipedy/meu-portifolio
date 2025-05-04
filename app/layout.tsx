@@ -5,7 +5,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/context/ThemeProvider";
 
-
 export const metadata: Metadata = {
   title: "Portifólio de Gabriel Felipe",
   description: "Portifólio de desenvolvedor web",
@@ -18,15 +17,13 @@ export default function RootLayout({
 }>) {
   return (
     <html className="scroll-smooth" lang="pt-BR">
-      <body
-        className={`font-inter bg-light-900 dark:bg-dark-100`}
-      >
-        <ThemeProvider>
+      <ThemeProvider>
+        <body className={`bg-light-900 dark:bg-dark-400`}>
           <Navbar />
-          {children}
-          <Footer className="pb-10" />
-        </ThemeProvider>
-      </body>
+          <main className="px-3">{children}</main>
+          <Footer className="pb-10 px-3" />
+        </body>
+      </ThemeProvider>
     </html>
   );
 }

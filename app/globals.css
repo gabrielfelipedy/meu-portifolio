@@ -24,7 +24,7 @@
   }
 
   .global-padding-y {
-    @apply py-4 sm:py-6 lg:py-8;
+    @apply py-3 sm:py-4 lg:py-5;
   }
 
   .paragraph-space {
@@ -120,7 +120,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: max(90vh, 700px); /* sets height to 80vh, but not less than 400px */
+    height: max(95vh, 700px); /* sets height to 80vh, but not less than 400px */
     z-index: -1;
     @apply bg-hero;
     background-size: contain; /* or 'contain' or specific value depending on your layout */
@@ -213,5 +213,6 @@
   html,
   body {
     min-width: 375px;
+    @apply font-inter;
   }
 }
