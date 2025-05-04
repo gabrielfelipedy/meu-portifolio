@@ -21,7 +21,7 @@ export default function Navbar() {
   const { mode, setMode } = useTheme();
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white supports-[backdrop-filter]:bg-background/60 dark:bg-dark-400 dark:supports-[backdrop-filter]:bg-dark-400/60 backdrop-blur">
+    <header className="sticky top-0 z-10 w-full bg-white supports-[backdrop-filter]:bg-background/60 dark:bg-dark-400 dark:supports-[backdrop-filter]:bg-dark-400/60 backdrop-blur">
       <div className="global-padding-x global-padding-y">
         <div className="max-container flex h-8 items-center justify-between">
           <div className="flex items-center">
