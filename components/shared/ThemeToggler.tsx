@@ -21,7 +21,7 @@ const ThemeToggler = ({ className = "" }) => {
      border-none bg-transparent shadow-none ${className}`}
     >
       <MenubarMenu>
-        <MenubarTrigger className="focus:bg-light-900 data-[state=open]:bg-light-900 dark:focus:bg-transparent dark:data-[state=open]:bg-transparent">
+        <MenubarTrigger className="focus:bg-transparent data-[state=open]:bg-transparent dark:focus:bg-transparent dark:data-[state=open]:bg-transparent">
           {mode === "light" ? (
             <Image
               src="assets/icons/sun.svg"

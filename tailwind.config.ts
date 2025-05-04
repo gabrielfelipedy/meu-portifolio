@@ -75,10 +75,10 @@ export default {
         monoglyphic: ["monoglyphic", "sans-serif"]
       },
       fontSize: {
-        title_xl: "70pt",
-        title_lg: "60pt",
-        title_md: "45pt",
-        title_sm: "45pt",
+        title_xl: "42pt",
+        title_lg: "42pt",
+        title_md: "42pt",
+        title_sm: "40pt",
         title: "35pt",
         subtitle_xl: "30pt",
         subtitle_lg: "25pt",

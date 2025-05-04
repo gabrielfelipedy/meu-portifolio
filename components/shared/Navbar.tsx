@@ -12,7 +12,6 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import ThemeToggler from "./ThemeToggler";
 import Image from "next/image";
 
-import * as motion from "motion/react-client";
 import { navItems } from "@/constants";
 
 export default function Navbar() {
@@ -21,8 +20,8 @@ export default function Navbar() {
   const { mode, setMode } = useTheme();
 
   return (
-    <header className="sticky top-0 z-10 w-full bg-white supports-[backdrop-filter]:bg-background/60 dark:bg-dark-400 dark:supports-[backdrop-filter]:bg-dark-400/60 backdrop-blur">
-      <div className="global-padding-x global-padding-y">
+    <header className="sticky top-0 z-50 w-full bg-white supports-[backdrop-filter]:bg-background/60 dark:bg-dark-400 dark:supports-[backdrop-filter]:bg-dark-400/60 backdrop-blur">
+      <div className="px-3 global-padding-y">
         <div className="max-container flex h-8 items-center justify-between">
           <div className="flex items-center">
             <Link
@@ -41,30 +40,20 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
-              <motion.li
-                key={item.name}
-                initial={false}
-                className="relative list-none"
-                onClick={() => setSelectedTab(item)}
-              >
-                <div className="relative">
-                  {item.name === selectedTab.name && (
-                    <motion.div
-                      layoutId="background-highlight"
-                      className="absolute inset-0 bg-slate-200 dark:bg-dark-500 rounded-lg"
-                      initial={{ opacity: 0 }}
-                      animate={{ opacity: 1 }}
-                      transition={{ duration: 0.2 }}
-                    />
-                  )}
-                  <Link
-                    href={item.href}
-                    className="relative z-10 block text-sm text-light-500 dark:text-white font-medium transition-colors rounded-lg p-3"
-                  >
-                    {item.name}
-                  </Link>
-                </div>
-              </motion.li>
+              // <motion.li
+              //   key={item.name}
+              //   initial={false}
+              //   className="relative list-none"
+              //   onClick={() => setSelectedTab(item)}
+              // >
+              <div key={item.name} className="relative">
+                <Link
+                  href={item.href}
+                  className="relative z-10 block text-sm text-light-500 dark:text-white font-medium transition-colors rounded-lg p-3"
+                >
+                  {item.name}
+                </Link>
+              </div>
             ))}
           </nav>
 

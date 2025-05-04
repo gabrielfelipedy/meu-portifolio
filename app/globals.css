@@ -24,7 +24,7 @@
   }
 
   .global-padding-y {
-    @apply py-4 sm:py-6 lg:py-8;
+    @apply py-3 sm:py-4 lg:py-5;
   }
 
   .paragraph-space {
@@ -213,5 +213,6 @@
   html,
   body {
     min-width: 375px;
+    @apply font-inter;
   }
 }

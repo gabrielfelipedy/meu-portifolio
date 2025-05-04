@@ -16,7 +16,7 @@ const Footer = (props: props) => {
   return (
     <footer
       id="contact"
-      className={`global-padding-x global-padding-y bg-light-900 dark:bg-dark-400 h-auto min-h-[100vh] ${props.className}`}
+      className={`global-padding-y bg-light-900 dark:bg-dark-400 h-auto min-h-[100vh] ${props.className}`}
     >
       <div className="max-container">
         <div className="flex flex-col items-center">
