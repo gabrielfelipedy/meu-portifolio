@@ -34,7 +34,7 @@
   .max-container {
     margin: 0;
     padding: 0;
-    max-width: 1440px;
+    max-width: 1280px;
     @apply mx-auto;
   }
 
@@ -214,5 +214,6 @@
   body {
     min-width: 375px;
     @apply font-inter;
+    @apply bg-light-900 dark:bg-dark-400;
   }
 }
