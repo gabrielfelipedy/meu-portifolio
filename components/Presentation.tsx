@@ -32,7 +32,7 @@ const Presentation = () => {
       className="flex items-center justify-center min-h-[95vh] relative overflow-hidden max-container"
       ref={container}
     >
-      <div className="flex flex-col items-centertext-center p-5 rounded-[0.75rem] max-w-[800px]">
+      <div className="flex flex-col items-centertext-center rounded-[0.75rem] max-w-[800px]">
         <p className="dark:text-light-800 font-small tracking-widest element">
           GABRIEL FELIPE
         </p>
