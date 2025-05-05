@@ -21,7 +21,7 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white supports-[backdrop-filter]:bg-background/60 dark:bg-dark-400 dark:supports-[backdrop-filter]:bg-dark-400/60 backdrop-blur">
-      <div className="px-3 global-padding-y">
+      <div className="px-8 global-padding-y">
         <div className="max-container flex h-8 items-center justify-between">
           <div className="flex items-center">
             <Link

@@ -20,8 +20,8 @@ export default function RootLayout({
       <ThemeProvider>
         <body>
           <Navbar />
-          <main className="px-3">{children}</main>
-          <Footer className="pb-10 px-3" />
+          <main className="px-8">{children}</main>
+          <Footer className="pb-10 px-8" />
         </body>
       </ThemeProvider>
     </html>
