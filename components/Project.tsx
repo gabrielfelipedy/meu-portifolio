@@ -81,7 +81,7 @@ const Project = (props: props) => {
         <Image
           src={props.image_src}
           alt="instagram"
-          className={`rounded-lg img-hover w-full md:w-[500px] lg:w-[750px] xl:w-[1250px] opacity-0 image-${props.id}`}
+          className={`rounded-lg img-hover w-full md:w-[500px] lg:w-[750px] xl:w-[1000px] opacity-0 image-${props.id}`}
         />
 
         <div className={`flex flex-col description-${props.id} opacity-0 justify-center mb-32`}>
